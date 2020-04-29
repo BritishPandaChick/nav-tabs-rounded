@@ -15,6 +15,7 @@ body {
 
 .tabs li {
     float: left;
+    position: relative;
 }
 
 .tabs a {
@@ -26,11 +27,62 @@ body {
     border-radius: 15px 15px 0 0;
 }
 
+.tabs .active {
+    z-index: 3;
+}
+
 .tabs .active a {
     background: #999;
 }
 
-.tabs .active:before, .tabs .active:after {
+.tabs .active:before, .tabs .active:after, 
+.tabs .active a:before, .tabs .active a:after,
+.tabs li:last-child:after, .tabs li:last-child a:after,
+.tabs li:last-child:before, .tabs li:last-child a:before {
     content: '';
+}
+
+.tabs li:before, .tabs li:after, .tabs li a:before, .tabs li a:after {
+    position: absolute;
+    bottom: 0;
+}
+
+.tabs li:before, .tabs li:after {
     background: #999;
+    width: 10px;
+    height: 10px;
+    display: block;
+    z-index: 1;
+}
+
+.tabs li:before {
+    left: -10px;
+}
+
+.tabs li:after {
+    right: -10px;
+}
+
+.tabs li a:before, .tabs li a:after {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: #ccc;
+    z-index: 2;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.tabs li a:before {
+    left: -20px;
+}
+
+.tabs li a:after {
+    right: -20px;
+}
+
+.tabs li:first-child.active a:before, .tabs li:las-child.active a:after {
+    background: #000;
 }
