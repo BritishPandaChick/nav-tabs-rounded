@@ -16,6 +16,7 @@ body {
 .tabs li {
     float: left;
     position: relative;
+    list-style-type: none;
 }
 
 .tabs a {
@@ -73,6 +74,11 @@ body {
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
+}
+
+.tabs .active a:before, .tabs .active a:after {
+    background: #ccc;
+
 }
 
 .tabs li a:before {
