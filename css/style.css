@@ -37,11 +37,11 @@ body {
     background: #999;
 }
 
-.tabs .active:before, .tabs .active:after, 
+.tabs .active:before, .tabs .active:after,
 .tabs .active a:before, .tabs .active a:after,
 .tabs li:last-child:after, .tabs li:last-child a:after,
 .tabs li:first-child:before, .tabs li:first-child a:before {
-    content: '';
+    content: "";
 }
 
 .tabs li:before, .tabs li:after, .tabs li a:before, .tabs li a:after {
@@ -71,26 +71,10 @@ body {
 .tabs li a:before, .tabs li a:after {
     width: 20px;
     height: 20px;
-    background: #ccc;
+    background: #222;
     z-index: 2;
 
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-}
-
-.tabs .active a:before, .tabs .active a:after {
-    background: #ccc;
-}
-
-.tabs li a:before {
-    left: -20px;
-}
-
-.tabs li a:after {
-    right: -20px;
-}
-
-.tabs li:first-child.active a:before, .tabs li:last-child.active a:after {
-    background: #000;
 }
