@@ -10,7 +10,7 @@ body {
 .tabs {
     margin: 100px 0;
     background: #000;
-    padding: 50px 0 29px 50px;
+    padding: 50px 50px 29px 50px;
 }
 
 .tabs li {
@@ -20,10 +20,11 @@ body {
 }
 
 .tabs a {
-    padding: 5px 15px;
+    padding: 5px 40px;
     display: block;
     background: #ccc;
     text-decoration: none;
+    color: #000;
 
     border-radius: 15px 15px 0 0;
 }
@@ -39,7 +40,7 @@ body {
 .tabs .active:before, .tabs .active:after, 
 .tabs .active a:before, .tabs .active a:after,
 .tabs li:last-child:after, .tabs li:last-child a:after,
-.tabs li:last-child:before, .tabs li:last-child a:before {
+.tabs li:first-child:before, .tabs li:first-child a:before {
     content: '';
 }
 
@@ -48,11 +49,14 @@ body {
     bottom: 0;
 }
 
-.tabs li:before, .tabs li:after {
+.tabs .active:before, .tabs .active:after {
     background: #999;
+}
+
+.tabs li:before, .tabs li:after {
+    background: #ccc;
     width: 10px;
     height: 10px;
-    display: block;
     z-index: 1;
 }
 
@@ -67,7 +71,6 @@ body {
 .tabs li a:before, .tabs li a:after {
     width: 20px;
     height: 20px;
-    display: block;
     background: #ccc;
     z-index: 2;
 
@@ -78,7 +81,6 @@ body {
 
 .tabs .active a:before, .tabs .active a:after {
     background: #ccc;
-
 }
 
 .tabs li a:before {
@@ -89,6 +91,6 @@ body {
     right: -20px;
 }
 
-.tabs li:first-child.active a:before, .tabs li:las-child.active a:after {
+.tabs li:first-child.active a:before, .tabs li:last-child.active a:after {
     background: #000;
 }
